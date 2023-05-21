@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  {% if current_user.is_authenticated %}
+    <p>안녕하세요! {{ current_user.username }} 님!</p>
+  {% else %}
+    <p>로그인 또는 회원가입을 해주세요!</p>
+  {% endif %}
+</div>
+
+{% endblock %}
